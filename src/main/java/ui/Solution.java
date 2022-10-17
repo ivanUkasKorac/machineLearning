@@ -70,6 +70,7 @@ public class Solution {
 		Node tree = model.fit(pathTrain, debth);
 		LinkedList<LinkedList<String>> examplesTrainAll = new LinkedList<>(model.getExamplesTrain(pathTrain));
 		LinkedList<LinkedList<String>> examplesTestAll = new LinkedList<>(model.getExamplesTrain(pathTest));
+		System.out.println();
 		System.out.println("[BRANCHES]:");
 		printTree(tree, 1, "");
 		LinkedList<String> predictions = model.predictions(pathTest, tree, examplesTrainAll);
