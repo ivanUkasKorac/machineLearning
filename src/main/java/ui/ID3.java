@@ -17,7 +17,7 @@ public class ID3 {
 	}
 	
 	
-	public static LinkedList<LinkedList<String>> getExamplesTrain(String path) {
+	public LinkedList<LinkedList<String>> getExamplesTrain(String path) {
 		LinkedList<String> features = new LinkedList<>();
 		LinkedList<LinkedList<String>> examplesAll = new LinkedList<>();
 		try (BufferedReader sc = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8"))) {
@@ -36,7 +36,6 @@ public class ID3 {
 				}
 				cnt++;
 			}
-			String y = features.getLast();
 			features.removeLast();
 			return examplesAll;
 
@@ -47,7 +46,7 @@ public class ID3 {
 		}
 	}
 
-	public static Node fit(String path, int debth) {
+	public Node fit(String path, int debth) {
 		LinkedList<String> features = new LinkedList<>();
 		LinkedList<LinkedList<String>> examplesAll = new LinkedList<>();
 		try (BufferedReader sc = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8"))) {
@@ -82,7 +81,7 @@ public class ID3 {
 
 	}
 
-	public static LinkedList<String> predictions(String path, TreePart tree, LinkedList<LinkedList<String>> examplesTrainAll) {
+	public LinkedList<String> predictions(String path, TreePart tree, LinkedList<LinkedList<String>> examplesTrainAll) {
 		LinkedList<String> features = new LinkedList<>();
 		LinkedList<LinkedList<String>> examplesAll = new LinkedList<>();
 		try (BufferedReader sc = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8"))) {
@@ -101,7 +100,6 @@ public class ID3 {
 				}
 				cnt++;
 			}
-			String y = features.getLast();
 			features.removeLast();
 			LinkedList<String> results = new LinkedList<>();
 			for (LinkedList<String> example2 : examplesAll) {
