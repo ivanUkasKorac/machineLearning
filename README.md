@@ -3,7 +3,7 @@
 The program takes in 3 argument values: 
   1. first the path to the train set file
   2. second the path to the test set file
-  (OPTIONAL) 3. Number for limiting the maximum debth of tree branch
+  3.(OPTIONAL) Number for limiting the maximum debth of tree branch
 
 For the program to run properly configure the train and test set in the next way:
 - this algorithm uses two datasets, one for training (train set) and the other for prediction (test set)
