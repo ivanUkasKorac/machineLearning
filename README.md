@@ -13,10 +13,10 @@ For the program to run properly configure the train and test set in the next way
     - the solution or the class label is the last feature name and the last value in every row
     - THERE SHOULD ALLWAYS BE AT LEAST ONE FEATURE (it being the class label) FOR THE PROGRAM TO WORK 
     - EXAMPLE:
-    weather,temperature,humidity,wind,play
-    sunny,hot,high,weak,no
-    rainy,cold,low,strong,no
-    ...
+      - weather,temperature,humidity,wind,play
+      - sunny,hot,high,weak,no
+      - rainy,cold,low,strong,no
+      - ...
     - TEST SET SHOULD ALSO HAVE A CLASS LABEL AND SOLUTION FOR CHECKING ACCURACY LATER
     
 What the program prints:
@@ -27,11 +27,11 @@ What the program prints:
   - feature name is the name of the feature in that node
   - feature value is the value of the branch of the tree that we are currently on
   -EXAMPLE:
-  1:weather=cloudy yes
-  1:weather=rainy 2:wind=strong no
-  1:weather=rainy 2:wind=weak yes
-  1:weather=sunny 2:humidity=normal yes
-  1:weather=sunny 2:humidity=high no
+    - 1:weather=cloudy yes
+    - 1:weather=rainy 2:wind=strong no
+    - 1:weather=rainy 2:wind=weak yes
+    - 1:weather=sunny 2:humidity=normal yes
+    - 1:weather=sunny 2:humidity=high no
 - furthermore the program prints the prediction for the test set, each prediction seperated by space in a row:
   -EXAMPLE:
   yes yes yes yes no yes yes yes no yes yes no yes no no yes yes yes yes
@@ -41,15 +41,15 @@ What the program prints:
   - it is a grid of predicted values and true values and each cell shows the number of examples for the combination of possible values
   - EXAMPLE:
     -if the class label was play and the possible values were yes and no, it would be a 2 x 2 matrix:
-    (yes yes) (no yes)
-    (yes no)  (no no)
+      - (yes yes) (no yes)
+      - (yes no)  (no no)
     - for the volleyball problem:
-    4 7
-    1 7
+      - 4 7
+      - 1 7
 - its also possible to give the program a number for limiting the debth of the tree, the number is the biggest debth of of each branch in the tree:
 -EXAMPLE for limit of 1:
-  1:weather=cloudy yes
-  1:weather=rainy yes
-  1:weather=sunny no
+  - 1:weather=cloudy yes
+  - 1:weather=rainy yes
+  - 1:weather=sunny no
   
     
